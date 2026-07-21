@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mobiliaria Fernandes</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+
+}
+
+
+body{
+
+background:#111;
+color:white;
+
+}
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:80px;
+
+background:#000;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 60px;
+
+z-index:1000;
+
+}
+
+
+.logo{
+
+font-size:32px;
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+}
+
+
+.logo span{
+
+color:#d4af37;
+
+}
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:30px;
+
+transition:.3s;
+
+}
+
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+
+
+.hero{
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+
+url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80");
+
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+
+
+.hero h1{
+
+font-size:65px;
+
+margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+font-size:22px;
+
+color:#ddd;
+
+margin-bottom:30px;
+
+}
+
+
+
+.hero button{
+
+padding:17px 45px;
+
+border:none;
+
+border-radius:40px;
+
+background:#d4af37;
+
+font-size:18px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+
+.hero button:hover{
+
+background:white;
+
+transform:scale(1.05);
+
+}
+
+
+
+.titulo{
+
+text-align:center;
+
+font-size:45px;
+
+margin:70px 0 40px;
+
+}
+
+
+
+.pesquisa{
+
+display:flex;
+
+justify-content:center;
+
+margin-bottom:40px;
+
+}
+
+
+.pesquisa input{
+
+width:450px;
+
+padding:16px;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+}
+
+
+
+.imoveis{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+
+padding:0 60px 60px;
+
+}
+
+
+
+.card{
+
+background:#1c1c1c;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 10px 30px rgba(212,175,55,.3);
+
+}
+
+
+
+.card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+}
+
+
+
+.card h2{
+
+padding:15px;
+
+}
+
+
+
+.card p{
+
+padding:0 15px;
+
+color:#ccc;
+
+}
+
+
+
+.preco{
+
+padding:15px;
+
+font-size:25px;
+
+color:#d4af37;
+
+font-weight:bold;
+
+}
+
+
+
+.card button{
+
+width:90%;
+
+margin:0 auto 20px;
+
+display:block;
+
+padding:15px;
+
+border:none;
+
+border-radius:40px;
+
+background:#d4af37;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
+
+
+
+footer{
+
+background:#000;
+
+padding:40px;
+
+text-align:center;
+
+margin-top:50px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+
+<div class="logo">
+
+MOBILIARIA <span>FERNANDES</span>
+
+</div>
+
+
+<nav>
+
+<a href="#">Home</a>
+
+<a href="#imoveis">Imóveis</a>
+
+<a href="#">Contato</a>
+
+</nav>
+
+
+</header>
+
+
+
+<section class="hero">
+
+
+<div>
+
+
+<h1>Seu novo lar começa aqui</h1>
+
+
+<p>Imóveis de alto padrão para você e sua família.</p>
+
+
+<button onclick="document.getElementById('imoveis').scrollIntoView()">
+
+Ver imóveis
+
+</button>
+
+
+</div>
+
+
+</section>
+
+
+
+<h1 class="titulo" id="imoveis">
+
+Imóveis disponíveis
+
+</h1>
+
+
+<div class="pesquisa">
+
+<input type="text" placeholder="Pesquisar imóvel...">
+
+</div>
+
+
+
+<section class="imoveis">
+    
+<!-- IMÓVEL 1 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80">
+
+<h2>Mansão Moderna</h2>
+
+<p>
+5 quartos • Piscina • Área gourmet • 450m²
+</p>
+
+<div class="preco">
+
+R$ 3.500.000
+
+</div>
+
+<button onclick="interesse('Mansão Moderna')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+<!-- IMÓVEL 2 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80">
+
+<h2>Apartamento Premium</h2>
+
+<p>
+3 quartos • 2 vagas • Vista panorâmica
+</p>
+
+<div class="preco">
+
+R$ 950.000
+
+</div>
+
+<button onclick="interesse('Apartamento Premium')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 3 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80">
+
+<h2>Casa Familiar</h2>
+
+<p>
+4 quartos • Jardim • Churrasqueira
+</p>
+
+<div class="preco">
+
+R$ 1.200.000
+
+</div>
+
+<button onclick="interesse('Casa Familiar')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 4 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=900&q=80">
+
+<h2>Casa de Campo</h2>
+
+<p>
+Natureza • Lago • Área externa
+</p>
+
+<div class="preco">
+
+R$ 2.100.000
+
+</div>
+
+<button onclick="interesse('Casa de Campo')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 5 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=80">
+
+<h2>Cobertura Luxo</h2>
+
+<p>
+4 suítes • Terraço • Vista da cidade
+</p>
+
+<div class="preco">
+
+R$ 2.800.000
+
+</div>
+
+<button onclick="interesse('Cobertura Luxo')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 6 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=80">
+
+<h2>Apartamento Compacto</h2>
+
+<p>
+2 quartos • Moderno • Bem localizado
+</p>
+
+<div class="preco">
+
+R$ 450.000
+
+</div>
+
+<button onclick="interesse('Apartamento Compacto')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+<!-- IMÓVEL 7 -->
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=900&q=80">
+
+<h2>Residência Elegance</h2>
+
+<p>
+4 quartos • Piscina • Garagem para 3 carros
+</p>
+
+<div class="preco">
+
+R$ 1.850.000
+
+</div>
+
+<button onclick="interesse('Residência Elegance')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 8 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80">
+
+<h2>Casa Alto Padrão</h2>
+
+<p>
+6 quartos • Cinema • Piscina aquecida
+</p>
+
+<div class="preco">
+
+R$ 5.900.000
+
+</div>
+
+<button onclick="interesse('Casa Alto Padrão')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 9 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=900&q=80">
+
+<h2>Loft Moderno</h2>
+
+<p>
+1 quarto • Design moderno • Centro
+</p>
+
+<div class="preco">
+
+R$ 380.000
+
+</div>
+
+<button onclick="interesse('Loft Moderno')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+
+<!-- IMÓVEL 10 -->
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600607688960-e095ff83135c?auto=format&fit=crop&w=900&q=80">
+
+<h2>Villa Exclusiva</h2>
+
+<p>
+5 suítes • Jardim • Espaço gourmet
+</p>
+
+<div class="preco">
+
+R$ 4.200.000
+
+</div>
+
+<button onclick="interesse('Villa Exclusiva')">
+
+Tenho interesse
+
+</button>
+
+</div>
+
+
+</section>
+
+
+<!-- ==========================
+     ÁREA DE CONTATO
+========================== -->
+
+
+<section id="contato" style="padding:60px;text-align:center;">
+
+
+<h1 style="font-size:40px;margin-bottom:20px;">
+
+Fale com um corretor
+
+</h1>
+
+
+<p style="color:#ccc;font-size:18px;margin-bottom:30px;">
+
+Encontre o imóvel perfeito para você.
+
+</p>
+
+
+<button onclick="abrirContato()" 
+style="
+padding:15px 40px;
+border:none;
+border-radius:40px;
+background:#d4af37;
+font-weight:bold;
+cursor:pointer;
+font-size:18px;
+">
+
+Entrar em contato
+
+</button>
+
+
+</section>
+
+<!-- ==========================
+     MODAL DE CONTATO
+========================== -->
+
+
+<style>
+
+.contato-modal{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.85);
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+}
+
+
+.contato-box{
+
+background:#1c1c1c;
+
+width:450px;
+
+max-width:90%;
+
+padding:30px;
+
+border-radius:20px;
+
+box-shadow:0 0 30px rgba(212,175,55,.3);
+
+}
+
+
+.contato-box h2{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+
+.contato-box input{
+
+width:100%;
+
+padding:14px;
+
+margin-bottom:15px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2a2a2a;
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+.contato-box textarea{
+
+width:100%;
+
+height:100px;
+
+padding:14px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2a2a2a;
+
+color:white;
+
+resize:none;
+
+}
+
+
+.contato-box button{
+
+width:100%;
+
+margin-top:15px;
+
+padding:15px;
+
+border:none;
+
+border-radius:40px;
+
+background:#d4af37;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+.fechar{
+
+background:#444!important;
+
+color:white;
+
+}
+
+
+</style>
+
+
+
+<div class="contato-modal" id="modalContato">
+
+
+<div class="contato-box">
+
+
+<h2>
+
+Solicitar contato
+
+</h2>
+
+
+<input 
+type="text"
+id="nome"
+placeholder="Seu nome">
+
+
+<input 
+type="email"
+id="email"
+placeholder="Seu e-mail">
+
+
+<input 
+type="tel"
+id="telefone"
+placeholder="Seu telefone">
+
+
+<textarea
+id="mensagem"
+placeholder="Digite sua mensagem">
+
+</textarea>
+
+
+<button onclick="enviarContato()">
+
+Enviar interesse
+
+</button>
+
+
+<button class="fechar" onclick="fecharContato()">
+
+Fechar
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- ==========================
+     ÁREA DOS CORRETORES
+========================== -->
+
+
+<section style="padding:60px;background:#000;text-align:center;">
+
+
+<h1 style="font-size:40px;margin-bottom:30px;">
+
+Nossa equipe
+
+</h1>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+">
+
+
+<div style="
+background:#1c1c1c;
+padding:25px;
+border-radius:20px;
+">
+
+
+<h2>
+
+Fernando Moraes
+
+</h2>
+
+
+<p style="color:#ccc;">
+
+Especialista em imóveis de luxo
+
+</p>
+
+
+</div>
+
+
+
+<div style="
+background:#1c1c1c;
+padding:25px;
+border-radius:20px;
+">
+
+
+<h2>
+
+Angel Fernandes
+
+</h2>
+
+
+<p style="color:#ccc;">
+
+Consultora residencial
+
+</p>
+
+
+</div>
+
+
+
+<div style="
+background:#1c1c1c;
+padding:25px;
+border-radius:20px;
+">
+
+
+<h2>
+
+Davi Fernandes⭐
+
+</h2>
+
+
+<p style="color:#ccc;">
+
+Especialista em apartamentos
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<!-- ==========================
+     RODAPÉ
+========================== -->
+
+<footer>
+
+<h2>
+MOBILIARIA FERNANDES
+</h2>
+
+<p>
+A melhor escolha para encontrar seu novo imóvel.
+</p>
+
+<br>
+
+<p>
+© 2026 MOBILIARIA FERNANDES - Todos os direitos reservados.
+</p>
+
+</footer>
+
+
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
+
+<script>
+
+
+// BOTÃO TENHO INTERESSE
+
+function interesse(imovel){
+
+alert(
+"Você demonstrou interesse em: " 
++ imovel 
++ "\nUm corretor entrará em contato."
+);
+
+}
+
+
+
+// ABRIR CONTATO
+
+function abrirContato(){
+
+document.getElementById("modalContato").style.display="flex";
+
+}
+
+
+
+// FECHAR CONTATO
+
+function fecharContato(){
+
+document.getElementById("modalContato").style.display="none";
+
+}
+
+
+
+// ENVIAR CONTATO
+
+function enviarContato(){
+
+let nome = document.getElementById("nome").value;
+
+let email = document.getElementById("email").value;
+
+
+if(nome == "" || email == ""){
+
+alert("Preencha seu nome e e-mail.");
+
+return;
+
+}
+
+
+alert(
+"Obrigado, " 
++ nome 
++ "!\nSeu interesse foi enviado com sucesso."
+);
+
+
+document.getElementById("modalContato").style.display="none";
+
+
+}
+
+
+
+// PESQUISA DE IMÓVEIS
+
+let pesquisa = document.querySelector(".pesquisa input");
+
+
+pesquisa.addEventListener("keyup",function(){
+
+
+let texto = this.value.toLowerCase();
+
+
+let cards = document.querySelectorAll(".card");
+
+
+cards.forEach(function(card){
+
+
+let nome = card.querySelector("h2").innerText.toLowerCase();
+
+
+
+if(nome.includes(texto)){
+
+
+card.style.display="block";
+
+
+}else{
+
+
+card.style.display="none";
+
+
+}
+
+
+});
+
+
+});
+
+
+</script>
+
+<!-- ==========================
+     CHECKOUT DO IMÓVEL
+========================== -->
+
+
+<style>
+
+.checkout{
+
+display:none;
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#000;
+
+z-index:99999;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+
+.checkout-box{
+
+background:#1c1c1c;
+
+width:500px;
+
+max-width:90%;
+
+padding:35px;
+
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 0 30px rgba(212,175,55,.4);
+
+}
+
+
+.checkout-box h1{
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+}
+
+
+.checkout-box input{
+
+width:100%;
+
+padding:15px;
+
+margin:10px 0;
+
+border:none;
+
+border-radius:10px;
+
+background:#333;
+
+color:white;
+
+}
+
+
+.checkout-box button{
+
+width:100%;
+
+padding:15px;
+
+margin-top:15px;
+
+border:none;
+
+border-radius:30px;
+
+background:#d4af37;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+.sucesso{
+
+display:none;
+
+font-size:25px;
+
+margin-top:20px;
+
+color:#00ff88;
+
+}
+
+
+</style>
+
+
+
+<div class="checkout" id="checkout">
+
+
+<div class="checkout-box">
+
+
+<h1>
+Checkout
+</h1>
+
+
+<h2 id="imovelEscolhido">
+
+</h2>
+
+
+<input 
+id="clienteCheckout"
+placeholder="Seu nome">
+
+
+<input 
+id="telefoneCheckout"
+placeholder="Seu telefone">
+
+
+<button onclick="confirmarCheckout()">
+
+Confirmar interesse
+
+</button>
+
+
+<div class="sucesso" id="sucesso">
+
+✅ Solicitação enviada com sucesso!
+
+<br>
+
+Um corretor entrará em contato.
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+let imovelAtual="";
+
+
+
+function interesse(nomeImovel){
+
+
+imovelAtual = nomeImovel;
+
+
+document.getElementById("imovelEscolhido").innerHTML = nomeImovel;
+
+
+document.getElementById("checkout").style.display="flex";
+
+
+}
+
+
+
+function confirmarCheckout(){
+
+
+let nome = document.getElementById("clienteCheckout").value;
+
+
+if(nome==""){
+
+alert("Digite seu nome");
+
+return;
+
+}
+
+
+
+document.getElementById("sucesso").style.display="block";
+
+
+}
+
+
+</script>
+</body>
+
+</html>
